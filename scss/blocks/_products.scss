@@ -1,0 +1,128 @@
+.Products {
+    min-width: 1440px;
+}
+
+.grid-text {
+    text-align: center;
+    margin-top: 87px;
+    margin-left: 449px;
+    margin-right: 449px;
+
+    .grid-title {
+        font-weight: 600;
+        font-size: 36px;
+        color: $font-color;
+        text-align: center;
+    }
+
+    .grid-subtitle {
+        margin-top: 16px;
+    }
+
+    @include mediaTablet {
+        margin-left: 300px;
+    }
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "card-sweet card-summer card-plush card-cotton";
+    grid-column-gap: 28px;
+    min-height: 732px;
+    margin-top: 69px;
+    width: 100%;
+    justify-self: center;
+
+    @include mediaTablet {
+        min-height: 680px;
+        width: fit-content;
+    }
+}
+
+.card-sweet {
+    grid-area: card-sweet;
+    border: 1px solid #CCCCCC;
+    width: 272px;
+    height: 450px;
+    margin-left: 145px;
+
+    .img-sweet {
+        width: 257px;
+        height: 358px;
+    }
+
+    @include mediaTablet {
+        width: 250px;
+        margin-left: 150px;
+    }
+}
+
+.card-summer {
+    grid-area: card-summer;
+    border: 1px solid #CCCCCC;
+    width: 272px;
+    height: 450px;
+    margin-left: 100px;
+
+    .img-summer {
+        width: 257px;
+        height: 358px;
+    }
+
+    @include mediaTablet {
+        width: 250px;
+        margin-left: 10px;
+    }
+}
+
+.card-plush {
+    grid-area: card-plush;
+    border: 1px solid #CCCCCC;
+    width: 272px;
+    height: 450px;
+    margin-left: 40px;
+
+    .img-plush {
+        width: 267px;
+        height: 357px;
+    }
+
+    @include mediaTablet {
+        width: 250px;
+        margin-left: -5px;
+    }
+}
+
+.card-cotton {
+    grid-area: card-cotton;
+    border: 1px solid #CCCCCC;
+    width: 272px;
+    height: 450px;
+    margin-right: 145px;
+
+    .img-cotton {
+        width: 267px;
+        height: 357px;
+    }
+
+    @include mediaTablet {
+        width: 250px;
+        margin-right: 185px;
+    }
+}
+
+.card-title {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 23px;
+}
+
+.price {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}

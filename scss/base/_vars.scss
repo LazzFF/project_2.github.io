@@ -1,0 +1,12 @@
+// Fonts
+@mixin font-main {
+    font-size: 14px;
+    font-family: "Jost", sans-serif;
+}
+
+// Colors
+$font-color: #333333;
+
+//Media
+$tablet: 999px;
+$big: 1920px

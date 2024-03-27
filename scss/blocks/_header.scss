@@ -1,0 +1,114 @@
+.header {
+    display: grid;
+    grid-template-columns: 2fr 5fr 2fr; 
+    grid-template-areas: "header-logo header-nav header-icons" "header-text header-text header-image";
+    grid-template-rows: auto auto;
+    min-height: 732px;
+    min-width: 1440px;
+    align-items: center;
+    grid-column-gap: 10px;
+    color: $font-color; 
+
+    @include mediaTablet {
+        min-height: 680px;
+        width: fit-content;
+    }
+}
+
+.header-logo {
+    grid-area: header-logo;
+    justify-self: center;
+
+    @include mediaTablet {
+        width: 100px;
+        margin-left: 45px;
+    }
+}
+
+.header-nav {
+    grid-area: header-nav;
+    font-family: "Jost";
+    font-size: 13px;
+    padding-left: 160px;
+
+    .header-nav__link {
+        margin-right: 60px;
+    }
+
+    .header-nav__link:last-child {
+        margin-right: 0;
+    }
+
+    @include mediaTablet {
+        margin-left: -120px;
+    }
+}
+
+.header-nav__link:hover {
+    color: #3C82F8;
+}
+
+.header-icons {
+    grid-area: header-icons;
+    justify-self: center;
+    margin-left: -150px;
+
+    .button__icons {
+        margin-right: 30px;
+    }
+
+    @include mediaTablet {
+        margin-right: 130px;
+    }
+}
+
+.header-text {
+    grid-area: header-text;
+    margin-left: 135px;
+}
+
+.header-subtitle {
+    @include font-main;
+}
+
+.header-title {
+    font-family: "Jost";
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.header-title__bottom {
+    font-family: "Jost";
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.header-image {
+    grid-area: header-image;
+    position: absolute;
+    right: 300px;
+    top: 200px;
+
+    @include mediaTablet {
+        width: 990px;
+        margin-right: -500px;
+    }
+}
+
+.header-button {
+    background-color: #023047;
+    width: 130px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    transition: .2s linear;
+
+    .text-button {
+        margin-top: 15px;
+        cursor: pointer;
+    }
+}
+
+.header-button:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #3C82F8;
+}
